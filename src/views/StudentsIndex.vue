@@ -15,6 +15,9 @@
       <img v-bind:src="student.photo">
       <p>{{ student.short_bio }}</p>
     </div>
+
+    
+
   </div>
 </template>
 
@@ -38,13 +41,4 @@ export default {
 </script>
 
 
-<!-- Email
-Phone Number
-Short Bio
-LinkedIn URL
-Twitter Handle
-Personal Blog/Website URL
-Online Resume URL
-Github URL
-Photo
- -->
+
