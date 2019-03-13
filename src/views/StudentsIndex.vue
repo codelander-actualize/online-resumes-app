@@ -24,6 +24,9 @@
 
 
 <style>
+img {
+  width: 200px;
+}
 </style>
 
 <script>
@@ -47,30 +50,4 @@ export default {
   // },
   methods: {}
 };
-</script> -->
-
-<!-- <script>
-import axios from "axios";
-
-export default {
-  data: function() {
-    return {
-      students: [],
-      students: [
-        { full_name: "Mo Money", short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility." },
-        { full_name: "No Money", short_bio: "Hello I'm No Money and I'd like to work at a bank." }
-      ]
-    };
-    nameFilter: ""
-  },
-  created: function() {
-    axios.get("/api/students").then(response => {
-      this.students = response.data;
-    });
-  },
-  methods: {}
-};
-</script> -->
-
-
-
+</script> --> 
