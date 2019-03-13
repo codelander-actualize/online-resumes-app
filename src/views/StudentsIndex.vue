@@ -12,9 +12,9 @@
     </datalist>
 
     <div>
-      <button class="btn btn-primary" v-on:click="setSortAttribute('full_name')">Sort by Title 
-        <i class="icon-arrow-up" v-if="sortAttribute == 'full_name' && sortAscending == 1"></i>
-        <i class="icon-arrow-down" v-if="sortAttribute == 'full_name' && sortAscending == -1"></i>
+      <button class="btn btn-success" v-on:click="setSortAttribute('full_name')">Sort by Name 
+        <i v-if="sortAttribute == 'full_name' && sortAscending == 1"></i>
+        <i v-if="sortAttribute == 'full_name' && sortAscending == -1"></i>
       </button>
     </div><br>
 
