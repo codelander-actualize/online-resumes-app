@@ -25,6 +25,7 @@
       <p>{{ student.short_bio }}</p>
     </div>
 
+    <router-link v-bind:to="'/students/' + student.id">More Info</router-link><br>
     
 
   </div>
