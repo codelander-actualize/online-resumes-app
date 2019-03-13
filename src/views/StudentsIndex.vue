@@ -11,9 +11,7 @@
 
 
     <h1>All Students</h1>
-    <h1>{{ message }}</h1>
-    <h2>{{ students }}</h2>
-    <div v-for="student in orderBy(students, nameFilter, 'first_name', 'last_name', 'full_name')">
+    <div v-for="student in students">
 <!--     <div v-for="student in orderBy(filterBy(students, nameFilter, 'first_name', 'last_name', 'full_name'), sortAttribute, sortAscending)"> ###not sure if this helps with filtering -->
       <h2>{{ student.full_name }}</h2>
       <img v-bind:src="student.photo">
@@ -27,6 +25,9 @@
 
 
 <style>
+img {
+  width: 200px;
+}
 </style>
 
 <script>
@@ -37,8 +38,16 @@ export default {
     return {
       message: "Welcome to Vue.js!",
       students: [
-        { full_name: "Mo Money", short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility." },
-        { full_name: "No Money", short_bio: "Hello I'm No Money and I'd like to work at a bank." }
+        {
+          full_name: "Mo Money",
+          short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility.",
+          photo: "https://www.parentmap.com/images/article/9463/GeekCover.jpg"
+        },
+        {
+          full_name: "No Money",
+          short_bio: "Hello I'm No Money and I'd like to work at a bank.",
+          photo: "https://images.halloweencostumes.com/products/4096/1-1/child-class-nerd-costume.jpg"
+        }
       ]
     };
     nameFilter: "";
@@ -50,30 +59,4 @@ export default {
   // },
   methods: {}
 };
-</script> -->
-
-<!-- <script>
-import axios from "axios";
-
-export default {
-  data: function() {
-    return {
-      students: [],
-      students: [
-        { full_name: "Mo Money", short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility." },
-        { full_name: "No Money", short_bio: "Hello I'm No Money and I'd like to work at a bank." }
-      ]
-    };
-    nameFilter: ""
-  },
-  created: function() {
-    axios.get("/api/students").then(response => {
-      this.students = response.data;
-    });
-  },
-  methods: {}
-};
-</script> -->
-
-
-
+</script> --> 
