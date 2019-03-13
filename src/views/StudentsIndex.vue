@@ -57,15 +57,14 @@ export default {
           id: 1,
           full_name: "Mo Money",
           short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility.",
-          photo_url:
-            "https://static1.squarespace.com/static/577d04ef579fb35f9472a49c/t/59e4bb894c326d9bada45270/1508162599194/1.jpg?format=750w"
+          photo_url: "https://i.imgur.com/8hV0g5C.jpg"
         },
         {
           id: 2,
           full_name: "No Money",
           short_bio: "Hello I'm No Money and I'd like to work at a bank.",
           photo_url:
-            "https://static1.squarespace.com/static/577d04ef579fb35f9472a49c/t/59e4bb894c326d9bada45270/1508162599194/1.jpg?format=750w"
+            "https://i.pinimg.com/736x/b0/a1/e0/b0a1e0896805b18dabcb1e0d5a0de39b--cat-in-suit-artist-portfolio.jpg"
         }
       ],
       nameFilter: "",
