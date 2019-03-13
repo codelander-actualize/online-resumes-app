@@ -11,10 +11,7 @@
 
 
     <h1>All Students</h1>
-    <h1>{{ message }}</h1>
-    <h2>{{ students }}</h2>
-    <div v-for="student in orderBy(students, nameFilter, 'first_name', 'last_name', 'full_name')">
-<!--     <div v-for="student in orderBy(filterBy(students, nameFilter, 'first_name', 'last_name', 'full_name'), sortAttribute, sortAscending)"> ###not sure if this helps with filtering -->
+    <div v-for="student in students">
       <h2>{{ student.full_name }}</h2>
       <img v-bind:src="student.photo">
       <p>{{ student.short_bio }}</p>
@@ -39,9 +36,9 @@ export default {
       students: [
         { full_name: "Mo Money", short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility." },
         { full_name: "No Money", short_bio: "Hello I'm No Money and I'd like to work at a bank." }
-      ]
+      ],
+      nameFilter: ""
     };
-    nameFilter: "";
   },
   // created: function() {
   //   axios.get("/api/students").then(response => {
