@@ -84,31 +84,31 @@ export default {
   data: function() {
     return {
       message: "Welcome to Vue.js!",
-      students: [
-        {
-          id: 1,
-          full_name: "Mo Money",
-          short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility.",
-          photo_url: "https://i.imgur.com/8hV0g5C.jpg"
-        },
-        {
-          id: 2,
-          full_name: "No Money",
-          short_bio: "Hello I'm No Money and I'd like to work at a bank.",
-          photo_url:
-            "https://i.pinimg.com/736x/b0/a1/e0/b0a1e0896805b18dabcb1e0d5a0de39b--cat-in-suit-artist-portfolio.jpg"
-        }
-      ],
+      students: [],
+      //       {
+      //         id: 1,
+      //         full_name: "Mo Money",
+      //         short_bio: "Hello I'm Mo Money and I'm on a day pass from a mental health facility.",
+      //         photo_url: "https://i.imgur.com/8hV0g5C.jpg"
+      //       },
+      //       {
+      //         id: 2,
+      //         full_name: "No Money",
+      //         short_bio: "Hello I'm No Money and I'd like to work at a bank.",
+      //         photo_url:
+      //           "https://i.pinimg.com/736x/b0/a1/e0/b0a1e0896805b18dabcb1e0d5a0de39b--cat-in-suit-artist-portfolio.jpg"
+      //       }
+      //     ],
       nameFilter: "",
       sortAttribute: "full_name",
       sortAscending: 1
     };
   },
-  // created: function() {
-  //   axios.get("/api/students").then(response => {
-  //     this.students = response.data;
-  //   });
-  // },
+  created: function() {
+    axios.get("/api/students").then(response => {
+      this.students = response.data;
+    });
+  },
   methods: {
     setSortAttribute: function(attribute) {
       if (this.sortAttribute === attribute) {

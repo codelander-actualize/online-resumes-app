@@ -16,7 +16,7 @@ export default new Router({
       component: StudentsIndex
     },
     {
-      path: '/student/:id',
+      path: '/students/:id',
       name: 'resume',
       component: Resume
     }
