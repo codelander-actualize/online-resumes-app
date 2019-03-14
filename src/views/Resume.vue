@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="resume">
     <h1>Contact Info</h1>
 
@@ -79,3 +79,4 @@
       
 
     
+ -->
