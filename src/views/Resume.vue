@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="resume">
     <h1>Contact Info</h1>
 
@@ -53,30 +53,24 @@
     </div>
 
 
+  </div>
+</template>  
 
+<script>
+import axios from "axios";
 
-
-
- <script>
-  import axios from "axios";
-
-  export default {
-    data: function() {
-      return {
-        student: {},
-      };
-    },
-   created: function() {
-     axios.get("/api/students/" + this.$route.params.id).then(response => {
-       console.log(response.data);
-       this.student = response.data;
-     });
-   },
-   methods: {}
-
+export default {
+  data: function() {
+    return {
+      student: {}
     };
-  </script>
-      
-
-    
- -->
+  },
+  created: function() {
+    axios.get("/api/students/" + this.$route.params.id).then(response => {
+      console.log(response.data);
+      this.student = response.data;
+    });
+  },
+  methods: {}
+};
+</script>
