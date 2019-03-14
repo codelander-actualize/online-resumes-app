@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="resume">
     <h1>Contact Info</h1>
 
@@ -31,7 +31,7 @@
       <p>Start Date: {{ education.start_date }}</p>
       <p>End Date: {{ education.end_date }}</p>
       <p>Degree: {{ education.degree }}</p>
-      <!-- <p>Institution: {{ education.university_name }}</p> -->
+      <p>Institution: {{ education.university_name }}</p> -->
       <p>{{ education.details }}</p>
     </div>
 
@@ -150,3 +150,4 @@ export default {
   methods: {}
 };
 </script>
+
