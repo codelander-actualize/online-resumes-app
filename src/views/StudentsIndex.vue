@@ -14,15 +14,13 @@
       </datalist>
 
     <div>
-
       <button class="btn btn-success" v-on:click="setSortAttribute('full_name')">Sort by Name 
         <i v-if="sortAttribute == 'full_name' && sortAscending == 1"></i>
         <i v-if="sortAttribute == 'full_name' && sortAscending == -1"></i>
       </button>
-
     </div><br>
 
-      <div v-for="student in orderBy(filterBy(students, nameFilter, 'full_name'), sortAttribute, sortAscending)" v-bind:key="student.id">
+    <div v-for="student in orderBy(filterBy(students, nameFilter, 'full_name'), sortAttribute, sortAscending)" v-bind:key="student.id">
 
         <div class="container m-2">
           <div class="media border p-2">
@@ -33,27 +31,24 @@
             </div>
           </div>
         </div>
-
-
-<!--           <div class="media">
-            <img class="img-thumbnail" v-bind:src="student.photo_url" alt="Student image">
-            <div class="w-100 shadow p-2 mb-4 bg-white rounded">
-              <div class="media-body">
-                <h5 class="m-n6 ">{{ student.full_name }} {{ student.short_bio }}</h5>
-                <p class="media-text">{{ student.short_bio }}</p>
-                <router-link v-bind:to="'/students/' + student.id">{{ student.full_name}}'s Resume</router-link><br>
-              </div>
-            </div> -->
         </div>
       </div>
-    </div>  
   </div>
-<!--           <img class="card-img-top" v-bind:src="student.photo_url" alt="Card image cap"> -->
-<!--         <div class="card" style="width: 58rem;">
+<!--      <img class="card-img-top" v-bind:src="student.photo_url" alt="Card image cap"> -->
+<!--      <div class="card" style="width: 58rem;">
           <div class="card-body">
-
             <h5 class="card-title">{{ student.full_name }}</h5>
-        </div> -->
+          </div> -->
+
+<!--      <div class="media">
+          <img class="img-thumbnail" v-bind:src="student.photo_url" alt="Student image">
+          <div class="w-100 shadow p-2 mb-4 bg-white rounded">
+            <div class="media-body">
+              <h5 class="m-n6 ">{{ student.full_name }} {{ student.short_bio }}</h5>
+              <p class="media-text">{{ student.short_bio }}</p>
+              <router-link v-bind:to="'/students/' + student.id">{{ student.full_name}}'s Resume</router-link><br>
+            </div>
+          </div> -->          
 </template>
 
 
