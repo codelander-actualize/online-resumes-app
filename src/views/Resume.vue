@@ -69,7 +69,7 @@
    created: function() {
      axios.get("/api/students/" + this.$route.params.id).then(response => {
        console.log(response.data);
-       this.product = response.data;
+       this.student = response.data;
      });
    },
    methods: {}
