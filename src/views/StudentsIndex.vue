@@ -27,7 +27,8 @@
             <img v-bind:src="student.photo_url" alt="Photo of Student" class="mr-3 mt-3 rounded-circle" style="width:60px;">
             <div class="media-body">
             <div class="text-md-left p-2">{{ student.full_name }}</div>
-            <div class="text-md-left">{{ student.short_bio }}</div>    
+            <div class="text-md-left">{{ student.short_bio }}</div>
+            <router-link v-bind:to="'/students/' + student.id">{{ student.full_name}}'s Resume</router-link><br>    
             </div>
           </div>
         </div>
@@ -49,13 +50,28 @@
               <router-link v-bind:to="'/students/' + student.id">{{ student.full_name}}'s Resume</router-link><br>
             </div>
           </div> -->          
+<!-- ======= -->
+<!--       <div v-for="student in orderBy(filterBy(students, nameFilter, 'full_name'), sortAttribute, sortAscending)" v-bind:key="student.id">
+        <div class="card" style="width: 25rem;">
+          <img class="card-img-top" v-bind:src="student.photo_url" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ student.full_name }}</h5>
+            <p class="card-text">{{ student.short_bio }}</p>
+        </div>
+        <div class="card-body">
+          <router-link v-bind:to="'/students/' + student.id">More Info</router-link><br>
+        </div>
+      </div>
+    </div>  
+    </div>
+  </div> -->
+    
 </template>
 
 
 <style>
 img {
-  width: 75px;
-  height: 75px;
+  width: 200px;
 }
 </style>
 
