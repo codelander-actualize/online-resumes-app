@@ -49,33 +49,29 @@
       <p>Name: {{ capstone.name }}</p>
       <p>{{ capstone.description }}</p>
       <p>Link: {{ capstone.url }}</p>
-      <img :src="capstone.screenshot" :alt="capstone.name">
+      <img :src="capstone.image_url" :alt="capstone.name">
     </div>
 
+  </div>
+</template>
 
 
 
+<script>
+import axios from "axios";
 
-
- <script>
-  import axios from "axios";
-
-  export default {
-    data: function() {
-      return {
-        student: {},
-      };
-    },
-   created: function() {
-     axios.get("/api/students/" + this.$route.params.id).then(response => {
-       console.log(response.data);
-       this.student = response.data;
-     });
-   },
-   methods: {}
-
+export default {
+  data: function() {
+    return {
+      student: {}
     };
-  </script>
-      
-
-    
+  },
+  created: function() {
+    axios.get("/api/students/" + this.$route.params.id).then(response => {
+      console.log(response.data);
+      this.student = response.data;
+    });
+  },
+  methods: {}
+};
+</script>
